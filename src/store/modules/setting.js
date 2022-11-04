@@ -10,7 +10,7 @@ const SettingModule = {
         /* Boxed layout */
         isBoxed: false,
         /* Floating sidebar */
-        isFloat: false,
+        isFloat: true,
         /* Sidebar show menu on hover only */
         asideHover: false,
         /* Show sidebar scrollbar (dont' hide it) */

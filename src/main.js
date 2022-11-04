@@ -17,7 +17,7 @@ import './vendor.js'
 
 import App from './App.vue'
 import router from './router'
-import i18next from './i18n.js';
+import i18next from './i18n.js'
 import store from './store'
 
 Vue.config.productionTip = false

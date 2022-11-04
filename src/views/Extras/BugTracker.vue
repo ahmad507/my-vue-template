@@ -26,7 +26,7 @@
                                     :options="{
                                         type:'pie',
                                         height:'50',
-                                        sliceColors:['#edf1f2', '#23b7e5']
+                                        sliceColors:['#edf1f2', '#797EF6']
                                     }"
                                     class="sparkline"/>
                                 <p class="mt-3">Issues</p>

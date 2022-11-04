@@ -2,7 +2,7 @@
    Component: layout
  ========================================================================== */
 body, .wrapper .section-container {
-  background-color: #f5f7fa; }
+  background-color: #fdfdfd; }
 
 .wrapper .aside-container {
   background-color: #fff; }
@@ -11,12 +11,12 @@ body, .wrapper .section-container {
    Component: top-navbar
  ========================================================================== */
 .topnavbar {
-  background-color: #23b7e5;
-  background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
+  background-color: #0d7fcc;
+  background-image: linear-gradient(to right, #0d7fcc 0%, #0d7fcc 100%);
   background-repeat: repeat-x; }
   @media (min-width: 992px) {
     .topnavbar .navbar-nav > .nav-item.show > .nav-link, .topnavbar .navbar-nav > .nav-item.show > .nav-link:hover, .topnavbar .navbar-nav > .nav-item.show > .nav-link:focus {
-      box-shadow: 0 -3px 0 #19a5d1 inset; } }
+      box-shadow: 0 -3px 0 #0d7fcc inset; } }
   .topnavbar .navbar-nav > .nav-item > .navbar-text {
     color: #fff; }
   .topnavbar .navbar-nav > .nav-item > .nav-link,
@@ -33,7 +33,22 @@ body, .wrapper .section-container {
    Component: sidebar
  ========================================================================== */
 .sidebar {
-  background-color: #fff; }
+  background-color: #fff;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  visibility: visible;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #23b1f9;
+  border-radius: 10px;
+}
   .sidebar .nav-heading {
     color: #919DA8; }
 
@@ -42,7 +57,7 @@ body, .wrapper .section-container {
   .sidebar-nav > li > a:focus, .sidebar-nav > li > a:hover, .sidebar-nav > li > .nav-item:focus, .sidebar-nav > li > .nav-item:hover {
     color: #23b7e5; }
   .sidebar-nav > li > a > em, .sidebar-nav > li > .nav-item > em {
-    color: inherits; }
+    color: #23b7e5; }
 
 .sidebar-nav > li.active, .sidebar-nav > li.active > a, .sidebar-nav > li.active > .nav-item, .sidebar-nav > li.active .sidebar-nav, .sidebar-nav > li.open, .sidebar-nav > li.open > a, .sidebar-nav > li.open > .nav-item, .sidebar-nav > li.open .sidebar-nav {
   background-color: #fcfcfc;

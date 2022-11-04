@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 // Layouts
 import Layout from '@/components/Layout/Layout'
 import LayoutHorizontal from '@/components/Layout/LayoutHorizontal'
@@ -10,6 +9,7 @@ const DashboardV1 = () => import('@/views/Dashboard/DashboardV1.vue')
 const DashboardV2 = () => import('@/views/Dashboard/DashboardV2.vue')
 const DashboardV3 = () => import('@/views/Dashboard/DashboardV3.vue')
 const DashboardH = () => import('@/views/Dashboard/DashboardH.vue')
+const MainLayout = () => import('@/views/Dashboard/MainLayout.vue')
 // Widgets
 const Widgets = () => import('@/views/Widgets/Widgets.vue')
 // Elements
@@ -97,6 +97,16 @@ const ForumCategories = () => import('@/views/Forum/ForumCategories.vue')
 const ForumDiscussion = () => import('@/views/Forum/ForumDiscussion.vue')
 const ForumTopics = () => import('@/views/Forum/ForumTopics.vue')
 const ForumHome = () => import('@/views/Forum/ForumHome.vue')
+// Reservation
+const BookingBus = () => import('@/views/Reservations/Bus/BookingBus.vue')
+const BookingAirlines = () => import('@/views/Reservations/Flight/BookingAirlines.vue')
+const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/BookingInternationalAirlines.vue')
+const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue')
+const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue')
+const BookingKai = () => import('@/views/Reservations/Train/BookingKAI.vue')
+// Payment
+
+
 
 
 Vue.use(VueRouter)
@@ -110,6 +120,41 @@ export default new VueRouter({
             path: '/',
             redirect: '/dashboardv1'
         },
+        {
+            path: '/',
+            component: Layout,
+            children : [
+                {
+                    path:'/mainlayout',
+                    component: MainLayout,
+                },
+                {
+                    path:'/bookingairlines',
+                    component: BookingAirlines
+                },
+                {
+                    path: '/bookinginternationalairlines',
+                    component: BookingInternationalAirlines
+                },
+                {
+                    path: '/bookingbus',
+                    component: BookingBus
+                },
+                {
+                    path: '/bookingkai',
+                    component: BookingKai
+                },
+                {
+                    path: '/bookingpelni',
+                    component: BookingPelni
+                },
+                {
+                    path: '/bookinghotel',
+                    component: BookingHotel
+                }
+            ]
+        },
+
         // Admin Pages
         {
             path: '/',
@@ -126,6 +171,14 @@ export default new VueRouter({
                     path: '/dashboardv3',
                     component: DashboardV3
                 },
+                // {
+                //     path: '/mainlayout',
+                //     component: MainLayout,
+                // },
+                // {
+                //     path : '/bookingairlines',
+                //     component: BookingAirline
+                // },
                 // Widgets
                 {
                     path: '/widgets',

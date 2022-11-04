@@ -1,7 +1,7 @@
 <template>
     <header class="topnavbar-wrapper">
         <!-- START Top Navbar-->
-        <nav class="navbar topnavbar">
+        <nav class="navbar topnavbar navbar-height">
             <!-- START navbar header-->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/">
@@ -115,6 +115,7 @@
                 <!-- START Offsidebar button-->
                 <li class="nav-item">
                     <a href="" class="nav-link" @click.prevent.prevent="toggleOffsidebar">
+<!--                    <a href="" class="nav-link">-->
                         <em class="icon-notebook"></em>
                     </a>
                 </li>

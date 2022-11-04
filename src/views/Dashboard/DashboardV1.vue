@@ -327,7 +327,7 @@
                             </div>
                         </div>
                         <Sparkline :options="{
-                                barColor:'#23b7e5',
+                                barColor:'#797EF6',
                                 height:30,
                                 barWidth:5,
                                 barSpacing:2
@@ -577,7 +577,7 @@
                     duration: 800,
                     enabled: true
                 },
-                barColor: '#23b7e5',
+                barColor: '#797EF6',
                 trackColor: 'rgba(200,200,200,0.4)',
                 scaleColor: false,
                 lineWidth: 10,

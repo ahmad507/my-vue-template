@@ -34,8 +34,8 @@ export const Bar = {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            backgroundColor: '#23b7e5',
-            borderColor: '#23b7e5',
+            backgroundColor: '#797EF6',
+            borderColor: '#797EF6',
             data: [rFactor(), rFactor(), rFactor(), rFactor(), rFactor(), rFactor(), rFactor()]
         }, {
             backgroundColor: '#5d9cec',
@@ -65,12 +65,12 @@ export const Doughnut = {
             backgroundColor: [
                 '#7266ba',
                 '#fad732',
-                '#23b7e5'
+                '#797EF6'
             ],
             hoverBackgroundColor: [
                 '#7266ba',
                 '#fad732',
-                '#23b7e5'
+                '#797EF6'
             ]
         }]
     },
@@ -95,12 +95,12 @@ export const Pie = {
             backgroundColor: [
                 '#7266ba',
                 '#fad732',
-                '#23b7e5'
+                '#797EF6'
             ],
             hoverBackgroundColor: [
                 '#7266ba',
                 '#fad732',
-                '#23b7e5'
+                '#797EF6'
             ]
         }]
     },

@@ -25,7 +25,7 @@
                             </div>
                             <div class="w-50 px-3 text-center">
                                 <Sparkline :options="{
-                                        barColor:'#23b7e5',
+                                        barColor:'#797EF6',
                                         height:'60',
                                         barWidth:'10',
                                         barSpacing:'6',
@@ -358,7 +358,7 @@
             return {
                 splineData: [{
                     "label": "Hours",
-                    "color": "#23b7e5",
+                    "color": "#797EF6",
                     "data": [
                         ["Jan", 70],
                         ["Feb", 20],
@@ -529,7 +529,7 @@
         mounted() {
             let pieOptions1 = {
                  animate: {duration: 800, enabled: true},
-                 barColor:"#23b7e5",
+                 barColor:"#797EF6",
                  trackColor:"#edf2f6",
                  scaleColor:false,
                  lineWidth:2,

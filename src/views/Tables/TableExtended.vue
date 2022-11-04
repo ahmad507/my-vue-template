@@ -372,7 +372,7 @@
                                 <tr>
                                     <td>Nullam sit amet</td>
                                     <td>
-                                        <div data-sparkline="" data-bar-color="#23b7e5" data-height="20" data-bar-width="5" data-bar-spacing="2" data-values="1,4,4,7,5,9,4" data-resize="true"></div>
+                                        <div data-sparkline="" data-bar-color="#797EF6" data-height="20" data-bar-width="5" data-bar-spacing="2" data-values="1,4,4,7,5,9,4" data-resize="true"></div>
                                     </td>
                                     <td>
                                         <div class="badge badge-warning">Delayed</div>

@@ -88,7 +88,7 @@
                     ykeys: ["a", "b"],
                     labels: ["Series A", "Series B"],
                     xLabelMargin: 2,
-                    barColors: ['#23b7e5', '#f05050'],
+                    barColors: ['#797EF6', '#f05050'],
                     resize: true
                 },
                 // Area Chart
@@ -97,7 +97,7 @@
                     xkey: 'y',
                     ykeys: ["a", "b"],
                     labels: ["Serie A", "Serie B"],
-                    lineColors: ['#7266ba', '#23b7e5'],
+                    lineColors: ['#7266ba', '#797EF6'],
                     resize: true
                 }
             }
