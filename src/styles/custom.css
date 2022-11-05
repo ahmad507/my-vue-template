@@ -55,9 +55,17 @@
 }
 .background-banner{
     width: auto;
-    height: 250px;
-    background-color: #0d7fcc;
+    height: 200px;
+    background-color: #4d62f6;
     z-index: 21;
+}
+.backdrop-banner{
+    width: auto;
+    height: 100vh;
+    background-color: red;
+}
+.section-container {
+    background-color: #4d62f6;
 }
 .red_border {
     border: 1px solid red;

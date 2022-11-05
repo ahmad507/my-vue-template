@@ -1,6 +1,10 @@
 <template>
     <ContentWrapper>
-        <div class="menu-icon">
+        <div class="mb-2">
+            <span><em class="fas fa-money-bill-alt"></em></span>
+            {{title}}
+        </div>
+        <div class="menu-icon mt-1">
             <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
                 <img :src="dataMenu.icon">
                 <div><small>{{dataMenu.text}}</small></div>
@@ -12,6 +16,9 @@
 <script>
     export default {
         name: "MenuPayment",
+        props :{
+            title : String,
+        },
         data () {
             return {
                 dataMenus: [

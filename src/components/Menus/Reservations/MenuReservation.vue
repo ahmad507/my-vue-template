@@ -1,10 +1,15 @@
 <template>
     <ContentWrapper>
-            <div class="menu-icon">
-                <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
+        <div class="mb-2">
+            <span><em class="fas fa-ticket-alt"></em></span>
+            {{title}}
+        </div>
+        <div class="menu-icon mt-1">
+            <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
                     <router-link :to="dataMenu.link" style="text-decoration: none">
                         <img :src="dataMenu.icon">
-                        <div><small>{{dataMenu.text}}</small></div>
+                        <br>
+                        <small class="text-dark">{{dataMenu.text}}</small>
                     </router-link>
                 </div>
             </div>
@@ -13,6 +18,9 @@
 <script>
     export default {
         name: "MenuReservation",
+        props :{
+            title : String,
+        },
         data () {
             return {
                 dataMenus: [

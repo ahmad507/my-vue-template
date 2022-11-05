@@ -1,10 +1,10 @@
 <template>
     <ContentWrapper>
-        <div class="row shadows">
+        <div class="row">
             <div class="col-md-12 d-sm-none xs_screen d-md-block mt-2">
                 <card-reservation/>
             </div>
-            <div class="row p-2">
+            <div class="row shadows p-2">
                 <div class="col-md-6 d-md-none mt-n2">
                     <card-deposit/>
                 </div>

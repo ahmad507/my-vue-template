@@ -104,13 +104,8 @@ const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/B
 const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue')
 const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue')
 const BookingKai = () => import('@/views/Reservations/Train/BookingKAI.vue')
-// Payment
-
-
-
 
 Vue.use(VueRouter)
-
 
 export default new VueRouter({
     mode: 'history',
@@ -118,7 +113,7 @@ export default new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: '/dashboardv1'
+            redirect: '/mainlayout'
         },
         {
             path: '/',
@@ -171,14 +166,7 @@ export default new VueRouter({
                     path: '/dashboardv3',
                     component: DashboardV3
                 },
-                // {
-                //     path: '/mainlayout',
-                //     component: MainLayout,
-                // },
-                // {
-                //     path : '/bookingairlines',
-                //     component: BookingAirline
-                // },
+
                 // Widgets
                 {
                     path: '/widgets',
