@@ -22,20 +22,20 @@
 }
 .shadows {
     box-shadow: 2px 4px 5px 0px #D6D6D6;
-    border-radius: 8px;
 }
 .shadows_sm {
     box-shadow: 2px 4px 5px 0px #D6D6D6;
-    border-radius: 8px;
+    height: auto;
     background-color: #6bbdff;
     z-index: -1;
 }
 .search_border {
     border: 1px solid #6bbdff;
     border-radius: 5px;
+    background-color: white;
 }
 .search_border_001 {
-    border-right: 1px solid #6bbdff;
+    border-right: 1px solid rgba(95, 166, 255, 0.75);
 }
 
 .search_border_002 {
@@ -45,7 +45,7 @@
     border: none !important;
     background: transparent;
     font-size: 14px !important;
-    padding: 15px !important;
+    padding: 12px !important;
 }
 
 .multiselect__placeholder {
@@ -64,6 +64,20 @@
     height: 100vh;
     background-color: red;
 }
+.datepicker_001{
+    align-content: center;
+}
+.datepicker_001 input {
+    border: none;
+    box-shadow: none;
+    margin: 8px 35%;
+    background-color: transparent;
+    font-size: 14px;
+}
+.datepicker_001 i svg {
+    display: none;
+}
+
 .section-container {
     background-color: #4d62f6;
 }
