@@ -29,7 +29,7 @@
             return {
                 component_menu : ['MenuReservation', 'Payment', 'Topup'],
                 user_details:{
-                    user_name : 'Ahmad Tour And Travel',
+                    user_name : 'Awesome Tour And Travel',
                     user_deposit : 15000,
                     user_transaction : 2500000
                 },

@@ -12,6 +12,7 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import VueI18Next from '@panter/vue-i18next';
+import ToggleButton from 'vue-js-toggle-button'
 
 import './vendor.js'
 
@@ -24,6 +25,7 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);
 Vue.use(VueI18Next);
+Vue.use(ToggleButton);
 
 const i18n = new VueI18Next(i18next);
 

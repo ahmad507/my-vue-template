@@ -11,16 +11,6 @@
                 </router-link>
             </div>
             <div class="col-12 mt-2 mb-2">
-                <a class="btn btn-circle" @click="tripTypeOneWay()">
-                    <em class="fas fa-2x fa-arrow-right text-white">
-                    </em>
-                </a>
-                <small class="text-decoration-none text-white mr-3">One Oay</small>
-                <a class="btn btn-circle" @click="tripTypeReturn()">
-                    <em class="fas fa-2x fa-exchange-alt text-white">
-                    </em>
-                </a>
-                <small class="text-decoration-none text-white">Return</small>
             </div>
         </div>
         <div class="container row mt-n4 ml-auto mr-auto p-2 shadow-sm bg-white rounded">
@@ -33,8 +23,8 @@
                     <div class="col-12 mb-2">
                         <ContentWrapper>
                             <div class="search_border row mb-2">
-                                <div class="col-2 search_border_001 p-1">
-                                    <em class="fas fa-w-2 fa-plane-departure ml-1"></em>
+                                <div class="col-2 search_border_001 p-1 text-center">
+                                    <em class="fas fa-w-2 fa-plane-departure"></em>
                                     <div class="m-auto">From</div>
                                 </div>
                                 <div class="col-10 p-0 m-0 border-0 search_box">
@@ -48,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="search_border row mb-2">
-                                <div class="col-2 search_border_001 p-1">
+                                <div class="col-2 search_border_001 p-1 text-center">
                                     <em class="fas fa-w-2 fa-plane-arrival ml-1"></em>
                                     <div class="m-auto">To</div>
                                 </div>
@@ -82,12 +72,10 @@
                                     </div>
                                     <div class="col-10 p-0 m-0 border-0">
                                         <datepicker
-                                                v-model="departureDate"
+                                                v-model="departureDate.from_date"
                                                 :full-month-name="true"
-                                                :calendar-button="true"
-                                                :clear-button="true"
                                                 :disabled-date="disabledBeforeToday"
-                                                calendar-button-icon="far fa-calendar" class="datepicker_001">
+                                                class="datepicker_001">
                                         </datepicker>
                                     </div>
                                 </div>
@@ -100,12 +88,10 @@
                                     </div>
                                     <div class="col-10 p-0 m-0 border-0">
                                         <datepicker
-                                                v-model="returnDate"
+                                                v-model="returnDate.to_date"
                                                 :full-month-name="true"
-                                                :calendar-button="true"
-                                                :clear-button="true"
                                                 :disabled-date="disabledBeforeToday"
-                                                calendar-button-icon="far fa-calendar" class="datepicker_001">
+                                                class="datepicker_001">
                                         </datepicker>
                                     </div>
                                 </div>
@@ -123,8 +109,23 @@
                     <div class="col-12 mb-2">
                         <card-passenger/>
                     </div>
+                    <div class="col-12 mb-2 p-2 border-top">
+                        <small class="mr-2"><strong>One Way/Return:</strong></small>
+                        <toggle-button v-model="one_way" :value="true" color="#82C7EB" :sync="true" :labels="{checked: 'One Way', unchecked: 'Return'}" style="width: 50px; height: 22px; margin: 3px;" />
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="container row mt-2 ml-auto mr-auto  shadow-sm bg-white rounded">
+            <card-airline
+                    title="Airlines"
+                    :dataPayload="{
+                    trip_type : setTripType(one_way),
+                    from_code : setOriginCode(origin),
+                    to_code : setDestinationCode(destination),
+                    return_code: setReturnCode(origin),
+                    from_date : setDepartureDate(departureDate),
+                    return_date : setReturnDate(returnDate)}"/>
         </div>
     </ContentWrapper>
 </template>
@@ -133,45 +134,60 @@
     import CardDestination from "../../../components/Common/Travel/Partials/CardDestination";
     import CardPassenger from "../../../components/Common/Travel/Partials/CardPassenger";
     import CardDatePicker from "../../../components/Common/Travel/Partials/CardDatePicker";
-    import Multiselect from 'vue-multiselect';
-    import Datepicker from 'vue2-datepicker';
+    import CardAirline from "../../../components/Common/Travel/CardAirline";
+    import { Multiselect } from 'vue-multiselect';
+    import { ToggleButton } from 'vue-js-toggle-button'
+    import Datepicker  from 'vue2-datepicker';
     import moment from 'moment';
     import 'vue2-datepicker/index.css';
     export default {
         data () {
             return {
                 one_way: true,
-                departureDate: moment().toDate(),
-                returnDate: moment().toDate(),
-                origin: { name: 'CGK', language: 'Jakarta, Soetta Int. Airport' },
-                destination: { name: 'DPS', language: 'Denpasr, I Gusti Ngurah Rai' },
+                departureDate: { from_date : moment().toDate() },
+                returnDate: { to_date : moment().toDate() },
+                origin: { name: 'CGK', city: 'Jakarta, Soetta Int. Airport' },
+                destination: { name: 'DPS', city: 'Denpasr, I Gusti Ngurah Rai' },
                 options: [
-                    { name: 'DPS', language: 'Denpasr' },
-                    { name: 'CGK', language: 'Jakarta' },
-                    { name: 'KNO', language: 'Medan' },
-                    { name: 'AMQ', language: 'Ambon' },
-                    { name: 'PLM', language: 'Palembang' }
+                    { name: 'DPS', city: 'Denpasr' },
+                    { name: 'CGK', city: 'Jakarta' },
+                    { name: 'KNO', city: 'Medan' },
+                    { name: 'AMQ', city: 'Ambon' },
+                    { name: 'PLM', city: 'Palembang' }
                 ],
+                searchPayload : {
+                }
             }
         },
         name: "BookingAirlines",
-        components: {CardPassenger, CardDestination, CardDatePicker,Multiselect, Datepicker},
+        components: {CardAirline, CardPassenger, CardDestination, CardDatePicker,Multiselect, Datepicker , ToggleButton},
         methods: {
-            destinationTrip ({ name, language }) {
-                return `${name} — [${language}]`
+            setTripType(one_way){
+                return one_way ? 'OW' : 'RT'
+            },
+            setOriginCode(origin){
+                return origin.name
+            },
+            setDestinationCode(destination){
+                return destination.name
+            },
+            setReturnCode(origin){
+                return origin.name
+            },
+            setDepartureDate(departureDate){
+                return moment(departureDate.from_date).format('DD-MM-YYYY')
+            },
+            setReturnDate(returnDate){
+                return moment(returnDate.to_date).format('DD-MM-YYYY')
+            },
+            destinationTrip ({ name, city }) {
+                return `${name} — [${city}]`
             },
             disabledBeforeToday(date) {
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
                 return date < new Date(today.getTime());
             },
-            tripTypeReturn(){
-                this.one_way = false;
-            },
-            tripTypeOneWay(){
-                this.one_way = true;
-                this.returnDate = this.departureDate;
-            }
         },
     }
 </script>
