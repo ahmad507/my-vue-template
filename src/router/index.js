@@ -10,6 +10,7 @@ const DashboardV2 = () => import('@/views/Dashboard/DashboardV2.vue')
 const DashboardV3 = () => import('@/views/Dashboard/DashboardV3.vue')
 const DashboardH = () => import('@/views/Dashboard/DashboardH.vue')
 const MainLayout = () => import('@/views/Dashboard/MainLayout.vue')
+const TestLayout = () => import('@/views/Dashboard/TestLayout.vue')
 // Widgets
 const Widgets = () => import('@/views/Widgets/Widgets.vue')
 // Elements
@@ -104,6 +105,15 @@ const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/B
 const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue')
 const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue')
 const BookingKai = () => import('@/views/Reservations/Train/BookingKAI.vue')
+// Payment
+const MultiFinance = () => import('@/views/Payments/Multifinance/MultiFinance.vue')
+const MultiPayment = () => import('@/views/Payments/PPOB/MultiPayment.vue')
+// Product Payment
+const PaymentPDAM = () => import('@/views/Payments/Products/PDAM.vue')
+const PaymentPGN = () => import('@/views/Payments/Products/PGN.vue')
+const PaymentPLN = () => import('@/views/Payments/Products/PLN.vue')
+const PaymentTelkom = () => import('@/views/Payments/Products/Telkom.vue')
+const PaymentPascabayar = () => import('@/views/Payments/Products/PascaBayar.vue')
 
 Vue.use(VueRouter)
 
@@ -122,6 +132,10 @@ export default new VueRouter({
                 {
                     path:'/mainlayout',
                     component: MainLayout,
+                },
+                {
+                    path:'/testlayout',
+                    component: TestLayout,
                 },
                 {
                     path:'/bookingairlines',
@@ -146,7 +160,15 @@ export default new VueRouter({
                 {
                     path: '/bookinghotel',
                     component: BookingHotel
-                }
+                },
+                {
+                    path: '/ordermultipayment',
+                    component: MultiPayment
+                },
+                {
+                    path: '/ordermultifinance',
+                    component: MultiFinance
+                },
             ]
         },
 

@@ -11,7 +11,7 @@
                 <small class="text-dark">{{airline.text}}</small>
             </div>
         </div>
-<!--        <div><code>{{dataPayload}}</code></div>-->
+        <div><code>{{data_Payloads}}</code></div>
     </ContentWrapper>
 </template>
 
@@ -37,17 +37,15 @@
         },
         methods : {
             searchSchedule(dataParams) {
-                const api = 'bookingairlines/';
-                const detailParams = {
-                    airlines : dataParams.detailPath,
-                    trip_type : dataParams.detailSearch.trip_type,
-                    from_code : dataParams.detailSearch.from_code,
-                    to_code : dataParams.detailSearch.to_code,
-                    return_code : dataParams.detailSearch.return_code,
-                    from_date : dataParams.detailSearch.from_date,
-                    return_date : dataParams.detailSearch.return_date
+                this.data_Payloads = {
+                    airlines: dataParams.detailPath,
+                    trip_type: dataParams.detailSearch.trip_type,
+                    from_code: dataParams.detailSearch.from_code,
+                    to_code: dataParams.detailSearch.to_code,
+                    return_code: dataParams.detailSearch.return_code,
+                    from_date: dataParams.detailSearch.from_date,
+                    return_date: dataParams.detailSearch.return_date
                 };
-                console.log(detailParams);
             }
         }
     }

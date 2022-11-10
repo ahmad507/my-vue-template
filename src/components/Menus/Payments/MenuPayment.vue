@@ -6,8 +6,10 @@
         </div>
         <div class="menu-icon mt-1">
             <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
-                <img :src="dataMenu.icon">
-                <div><small>{{dataMenu.text}}</small></div>
+                <router-link :to="dataMenu.link" style="text-decoration: none">
+                    <img :src="dataMenu.icon" alt="logo-pembayaran.png" />
+                    <div><small>{{dataMenu.text}}</small></div>
+                </router-link>
             </div>
         </div>
     </ContentWrapper>
@@ -22,16 +24,16 @@
         data () {
             return {
                 dataMenus: [
-                    { icon: "../../../../icons/ICN_PDAM.png", text: "PDAM" },
-                    { icon: "../../../../icons/ICN_PLN.png", text: "PLN" },
-                    { icon: "../../../../icons/ICN_PGN.png", text: "PGN" },
-                    { icon: "../../../../icons/ICN_TELKOM.png", text: "Telkom" },
-                    { icon: "../../../../icons/ICN_PASCA_BAYAR.png", text: "Pasca Bayar" },
-                    { icon: "../../../../icons/ICN_ADIRA.png", text: "ADIRA" },
-                    { icon: "../../../../icons/ICN_FIF.png", text: "FIF" },
-                    { icon: "../../../../icons/ICN_WOM.png", text: "WOM" },
-                    { icon: "../../../../icons/ICN_MCF.png", text: "MFC" },
-                    { icon: "../../../../icons/ICN_MAF.png", text: "MAF" },
+                    { icon: "../../../../icons/ICN_PDAM.png", text: "PDAM", link: '/ordermultipayment' },
+                    { icon: "../../../../icons/ICN_PLN.png", text: "PLN", link: '/ordermultipayment' },
+                    { icon: "../../../../icons/ICN_PGN.png", text: "PGN", link: '/ordermultipayment' },
+                    { icon: "../../../../icons/ICN_TELKOM.png", text: "Telkom", link: '/ordermultipayment' },
+                    { icon: "../../../../icons/ICN_PASCA_BAYAR.png", text: "Pasca Bayar", link: '/ordermultipayment' },
+                    { icon: "../../../../icons/ICN_ADIRA.png", text: "ADIRA", link: '/ordermultifinance' },
+                    { icon: "../../../../icons/ICN_FIF.png", text: "FIF", link: '/ordermultifinance' },
+                    { icon: "../../../../icons/ICN_WOM.png", text: "WOM", link: '/ordermultifinance' },
+                    { icon: "../../../../icons/ICN_MCF.png", text: "MFC", link: '/ordermultifinance' },
+                    { icon: "../../../../icons/ICN_MAF.png", text: "MAF", link: '/ordermultifinance' },
                     // { icon: "beenhere", text: "Status", route: "/status" },
                 ],
             }

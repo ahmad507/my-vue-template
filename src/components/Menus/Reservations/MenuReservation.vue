@@ -7,7 +7,7 @@
         <div class="menu-icon mt-1">
             <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
                     <router-link :to="dataMenu.link" style="text-decoration: none">
-                        <img :src="dataMenu.icon">
+                        <img :src="dataMenu.icon" alt="menu-icon.png" />
                         <br>
                         <small class="text-dark">{{dataMenu.text}}</small>
                     </router-link>
@@ -30,7 +30,6 @@
                     { icon: "../../../../icons/ICN_TRAIN.png", text: "KAI", link: '/bookingkai' },
                     { icon: "../../../../icons/ICN_SHIP.png", text: "PELNI", link: '/bookingpelni' },
                     { icon: "../../../../icons/ICN_HOTEL.png", text: "Hotel", link: '/bookinghotel' },
-                    // { icon: "beenhere", text: "Status", route: "/status" },
                 ],
             }
         }

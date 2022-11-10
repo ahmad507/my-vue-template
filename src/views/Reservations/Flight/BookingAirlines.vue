@@ -1,19 +1,8 @@
 <template>
     <ContentWrapper>
-        <div class="row p-4 mt-n4 shadows_sm">
-            <div class="col-12">
-                <router-link to="/mainlayout" style="text-decoration: none">
-                    <a class="btn btn-circle">
-                        <em class="fas fa-2x fa-arrow-alt-circle-left text-white">
-                        </em>
-                    </a>
-                    <small class="text-decoration-none text-white">Back</small>
-                </router-link>
-            </div>
-            <div class="col-12 mt-2 mb-2">
-            </div>
-        </div>
-        <div class="container row mt-n4 ml-auto mr-auto p-2 shadow-sm bg-white rounded">
+        <header-tools link="/testlayout" title="Home"/>
+        <div class="container-fulid row ml-auto mr-auto  shadow-sm bg-white rounded">
+            <!--AIRPORT START-->
             <div class="col-md-4 mt-2 mb-2 bg-white">
                 <div class="row">
                     <div class="col-12 mt-2 mb-2">
@@ -56,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            <!--DATE DESTINATION START-->
             <div class="col-md-4 mt-2 mb-2 bg-white">
                 <div class="row">
                     <div class="col-12 mt-2 mb-2">
@@ -70,7 +60,7 @@
                                         <em class="fas fa-w-2 fa-calendar-check ml-1"></em>
                                         <div class="m-auto">Depart</div>
                                     </div>
-                                    <div class="col-10 p-0 m-0 border-0">
+                                    <div class="col-8 p-0 m-0 border-0">
                                         <datepicker
                                                 v-model="departureDate.from_date"
                                                 :full-month-name="true"
@@ -86,12 +76,12 @@
                                         <em class="fas fa-w-2 fa-calendar-check ml-1"></em>
                                         <div class="m-auto">Return</div>
                                     </div>
-                                    <div class="col-10 p-0 m-0 border-0">
+                                    <div class="col-8 p-0 m-0 border-0">
                                         <datepicker
                                                 v-model="returnDate.to_date"
                                                 :full-month-name="true"
                                                 :disabled-date="disabledBeforeToday"
-                                                class="datepicker_001">
+                                                class="datepicker_001 text-bold">
                                         </datepicker>
                                     </div>
                                 </div>
@@ -100,6 +90,7 @@
                     </div>
                 </div>
             </div>
+            <!--PASSENGER START-->
             <div class="col-md-4 mt-2 mb-2 bg-white">
                 <div class="row">
                     <div class="col-12 mt-2 mb-2">
@@ -109,32 +100,36 @@
                     <div class="col-12 mb-2">
                         <card-passenger/>
                     </div>
-                    <div class="col-12 mb-2 p-2 border-top">
-                        <small class="mr-2"><strong>One Way/Return:</strong></small>
-                        <toggle-button v-model="one_way" :value="true" color="#82C7EB" :sync="true" :labels="{checked: 'One Way', unchecked: 'Return'}" style="width: 50px; height: 22px; margin: 3px;" />
+                    <div class="col-12 mt-2 mb-2 p-2 border-top">
+                        <div class="row mt-2 p-1">
+                            <div class="col-6 border-right align-content-center">
+                                <div class="align-items-center"><strong class="mr-2 w-50 h-25"><strong>One Way/Return:</strong></strong></div>
+                                <div class="align-items-center"><toggle-button v-model="one_way" :value="true" color="#82C7EB" :sync="true" :labels="{ checked: 'One Way', unchecked: 'Return' }" style="width: 50px; height: 25px; margin: 3px;"/></div>
+                            </div>
+                            <div class="col-6">
+                                <search-flight-button
+                                        title="Search Flight"
+                                        :dataPayload="{
+                                trip_type : setTripType(one_way),
+                                from_code : setOriginCode(origin),
+                                to_code : setDestinationCode(destination),
+                                return_code: setReturnCode(origin),
+                                from_date : setDepartureDate(departureDate),
+                                return_date : setReturnDate(returnDate)}"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container row mt-2 ml-auto mr-auto  shadow-sm bg-white rounded">
-            <card-airline
-                    title="Airlines"
-                    :dataPayload="{
-                    trip_type : setTripType(one_way),
-                    from_code : setOriginCode(origin),
-                    to_code : setDestinationCode(destination),
-                    return_code: setReturnCode(origin),
-                    from_date : setDepartureDate(departureDate),
-                    return_date : setReturnDate(returnDate)}"/>
         </div>
     </ContentWrapper>
 </template>
 
 <script>
-    import CardDestination from "../../../components/Common/Travel/Partials/CardDestination";
+    import HeaderTools from "../../../components/Utils/HeaderTools";
     import CardPassenger from "../../../components/Common/Travel/Partials/CardPassenger";
-    import CardDatePicker from "../../../components/Common/Travel/Partials/CardDatePicker";
-    import CardAirline from "../../../components/Common/Travel/CardAirline";
+    import SearchFlightButton from "../../../components/Utils/SearchFlightButton";
     import { Multiselect } from 'vue-multiselect';
     import { ToggleButton } from 'vue-js-toggle-button'
     import Datepicker  from 'vue2-datepicker';
@@ -160,7 +155,7 @@
             }
         },
         name: "BookingAirlines",
-        components: {CardAirline, CardPassenger, CardDestination, CardDatePicker,Multiselect, Datepicker , ToggleButton},
+        components: { CardPassenger, SearchFlightButton, Multiselect, Datepicker , ToggleButton, HeaderTools },
         methods: {
             setTripType(one_way){
                 return one_way ? 'OW' : 'RT'
@@ -191,5 +186,5 @@
         },
     }
 </script>
-
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style scoped> </style>

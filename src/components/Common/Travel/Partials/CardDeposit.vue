@@ -1,5 +1,5 @@
 <template>
-    <div class="row p-4 d-flex flex-wrap shadows_sm">
+    <div class="row p-4 d-flex flex-wrap">
         <div class="col-md-3 bg-white p-2 col-4 mt-2 mb-2 rounded-left shadow-sm">
             <div class="row my-1 mx-2">
                 <em class="fas fa-1x ml-2 mr-2 fa-user-circle"></em>

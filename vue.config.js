@@ -24,4 +24,8 @@ module.exports = {
     transpileDependencies: [
         'resize-detector' // vue-echarts
     ],
+    devServer: {
+        host: '0.0.0.0',
+        public : '192.168.0.180'
+    },
 };

@@ -24,6 +24,10 @@ const Menu = [
             {
                 name: 'Transaction',
                 path: '/mainlayout'
+            },
+            {
+                name: 'TestLayout',
+                path: '/testlayout'
             }
         ]
     },
