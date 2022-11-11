@@ -107,19 +107,49 @@
                                 <div class="align-items-center"><toggle-button v-model="one_way" :value="true" color="#82C7EB" :sync="true" :labels="{ checked: 'One Way', unchecked: 'Return' }" style="width: 50px; height: 25px; margin: 3px;"/></div>
                             </div>
                             <div class="col-6">
-                                <search-flight-button
-                                        title="Search Flight"
-                                        :dataPayload="{
-                                trip_type : setTripType(one_way),
-                                from_code : setOriginCode(origin),
-                                to_code : setDestinationCode(destination),
-                                return_code: setReturnCode(origin),
-                                from_date : setDepartureDate(departureDate),
-                                return_date : setReturnDate(returnDate)}"
-                                />
+                                <!--                                <search-flight-button-->
+                                <!--                                        title="Search Flight"-->
+                                <!--                                        :dataPayload="{-->
+                                <!--                                trip_type : setTripType(one_way),-->
+                                <!--                                from_code : setOriginCode(origin),-->
+                                <!--                                to_code : setDestinationCode(destination),-->
+                                <!--                                return_code: setReturnCode(origin),-->
+                                <!--                                from_date : setDepartureDate(departureDate),-->
+                                <!--                                return_date : setReturnDate(returnDate)}"-->
+                                <!--                                />-->
+                                <!--                                <submit-button  title="Search" :matrixschedule="flight_matrix" />-->
+                                <button class="btn-search"  @click.prevent="createMatrix">Search</button>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+<!--        <code>{{schedule_matrix}}</code>-->
+        <div class="container-fulid row col-md-10 ml-auto mr-auto">
+            <div class="col-12 card-body shadow-sm shadow-sm box-info-regulation-info rounded mt-3 mb-1" v-for="schedule_matrix_ref in schedule_matrix" :key="schedule_matrix_ref.id">
+                <div class="card-text blue_border bg-white rounded">
+                    {{schedule_matrix_ref.Operating}}
+                    <br>
+                    Flight Date : {{flightDateFormat(schedule_matrix_ref.Departure.Dep_Time)}} to {{flightDateFormat(schedule_matrix_ref.Arrival.Arr_Time)}}
+                    <br>
+                    Flight at : {{flightTimeFormat(schedule_matrix_ref.Departure.Dep_Time)}} to {{flightTimeFormat(schedule_matrix_ref.Arrival.Arr_Time)}}
+                    <br>
+                    Flight route : {{schedule_matrix_ref.Departure.Dep_IATA}} - {{schedule_matrix_ref.Arrival.Arr_IATA}}
+                    <br>
+                    Seat Avail  : {{schedule_matrix_ref.ClassAvail}}
+                    <br>
+                    Flight duration : {{schedule_matrix_ref.Duration}}
+<!--                    <div class="row card-body" v-for="fare_matrix_ref in fare_matrix" :key="fare_matrix_ref.id">-->
+<!--                        <div class="col-6 card-text red_border">-->
+<!--                            Fare Code : {{fare_matrix_ref.FareBasisCodes}}-->
+<!--                            <br>-->
+<!--                            Class : {{fare_matrix_ref.ResBookDesigCode}}-->
+<!--                            <br>-->
+<!--                            Price : Rp {{numberFormat(fare_matrix_ref.TotalFare)}} / Pax (Include Tax)-->
+<!--                            <br>-->
+<!--                            Cabin :{{fare_matrix_ref.ClassSeat}}</div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -130,11 +160,15 @@
     import HeaderTools from "../../../components/Utils/HeaderTools";
     import CardPassenger from "../../../components/Common/Travel/Partials/CardPassenger";
     import SearchFlightButton from "../../../components/Utils/SearchFlightButton";
-    import { Multiselect } from 'vue-multiselect';
-    import { ToggleButton } from 'vue-js-toggle-button'
-    import Datepicker  from 'vue2-datepicker';
+    import SubmitButton from "../../../components/Utils/SubmitButton";
+    import {Multiselect} from 'vue-multiselect';
+    import {ToggleButton} from 'vue-js-toggle-button'
+    import Datepicker from 'vue2-datepicker';
     import moment from 'moment';
     import 'vue2-datepicker/index.css';
+    import FlightMatrixRow from '../../../services/FlightMatrixRows.json'
+    import Buttons from "../../Elements/Buttons";
+
     export default {
         data () {
             return {
@@ -150,13 +184,20 @@
                     { name: 'AMQ', city: 'Ambon' },
                     { name: 'PLM', city: 'Palembang' }
                 ],
-                searchPayload : {
-                }
+                searchPayload : {},
+                fare_matrix : {},
+                schedule_matrix : {},
+                flight_matrix : FlightMatrixRow
             }
         },
         name: "BookingAirlines",
-        components: { CardPassenger, SearchFlightButton, Multiselect, Datepicker , ToggleButton, HeaderTools },
+        components: {Buttons, CardPassenger, SearchFlightButton, Multiselect, Datepicker , ToggleButton, HeaderTools, SubmitButton },
         methods: {
+            createMatrix(){
+                const data_schedule_matrix = this.flight_matrix['message'];
+                this.fare_matrix = data_schedule_matrix['fare_ref'];
+                this.schedule_matrix = data_schedule_matrix['matrix_ref']
+            },
             setTripType(one_way){
                 return one_way ? 'OW' : 'RT'
             },
@@ -183,6 +224,21 @@
                 today.setHours(0, 0, 0, 0);
                 return date < new Date(today.getTime());
             },
+            numberFormat (data_value){
+                return data_value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            },
+            flightTimeFormat(data_value){
+                return moment(data_value).format('LT')
+            },
+            flightDateFormat(data_value){
+                return moment(data_value).format('DD-MM-YYYY')
+            },
+            getClassSeatAvail(data_value){
+                return Object.keys(data_value);
+            },
+            getSeatAvail(data_value){
+                return Object.values(data_value)
+            }
         },
     }
 </script>

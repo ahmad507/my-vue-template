@@ -79,17 +79,17 @@
                     </div>
                 </div>
                 <div class="col-2 text-center p-1 box-icon" @click="getTopUp">
-                    <em class="text-primary text-center fas fa-plus-square"></em>
+                    <em class="text-primary text-center mt-1 mb-1 fas fa-2x fa-plus-square"></em>
                     <br>
                     <small class="text-bold">Isi Deposit</small>
                 </div>
                 <div class="col-2 text-center p-1 box-icon" @click="getUserProfile">
-                    <em class="text-primary text-center fas fa-user-circle"></em>
+                    <em class="text-primary text-center mt-1 mb-1 fas fa-2x fa-user-circle"></em>
                     <br>
                     <small class="text-bold">Info Akun</small>
                 </div>
                 <div class="col-2 text-center p-1 box-icon" @click="getUserTransaction">
-                    <em class="text-primary text-center fas fa-list-alt"></em>
+                    <em class="text-primary text-center mt-1 mb-1 fas fa-2x fa-list-alt"></em>
                     <br>
                     <small class="text-bold">Pesanan</small>
                 </div>

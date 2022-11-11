@@ -169,6 +169,14 @@ export default new VueRouter({
                     path: '/ordermultifinance',
                     component: MultiFinance
                 },
+                {
+                    path: '/orderpdam',
+                    component: PaymentPDAM
+                },
+                {
+                    path: '/orderpln',
+                    component: PaymentPLN
+                },
             ]
         },
 

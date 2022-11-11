@@ -1,25 +1,28 @@
 <template>
     <div class="container-fluid">
         <div class="col">
-            <div class="col-12 green_border">A</div>
-            <div class="col-12 red_border">B</div>
+            <div class="col-12 container-fluid ">
+                <div class="content-heading">
+                    <div>{{product_title}}
+                        <small class="mt-2">{{product_tag}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 container-fluid mt-n4">
+                <div class="card text-black-50 border-primary box-info-regulation">
+                    <div class="card-body p-1 ">
+                        <div class="card-text ml-2 mr-2">
+                            <strong>Keterangan</strong>
+                            <p class="mt-1">1. Pembayaran Tagihan gas dapat dilakukan setelah tanggal 5 setiap bulannya</p>
+                            <p class="mt-n2">2. Total tagihan yang tertera sudah termasuk denda (bila ada)</p>
+                            <p class="mt-n2">3. Biaya admin adalah Rp 2500.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-<!--        <div class="row">-->
-<!--            <div class="content-heading">-->
-<!--                <div class="red_border">{{product_title}}-->
-<!--                    <small class="mt-2">{{product_tag}}</small>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="card text-white bg-success mb-3">-->
-<!--                <div class="card-header">Header</div>-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title">Success card title</h5>-->
-<!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
+        <div class="row">
+        </div>
     </div>
 </template>
 

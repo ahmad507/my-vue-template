@@ -1,7 +1,9 @@
 <template>
     <ContentWrapper>
         <header-tools link="/testlayout" title="Home"/>
-        <header-payment product_title="Bayar Tagihan Gas" product_tag="Pembayaran Tagihan Gas"/>
+        <div class="row">
+            <header-payment product_title="Bayar Tagihan Gas" product_tag="Pembayaran Tagihan Gas"/>
+        </div>
     </ContentWrapper>
 </template>
 
