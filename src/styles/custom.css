@@ -46,24 +46,25 @@
 .search_border_002 {
     border-bottom: 1px solid #6bbdff;
 }
-.multiselect__tags {
-    border: none !important;
-    background: transparent;
-    font-size: 14px !important;
-    padding: 12px !important;
-}
+/*.multiselect__tags {*/
+/*    border: none !important;*/
+/*    background: transparent;*/
+/*    font-size: 14px !important;*/
+/*    padding: 12px !important;*/
+/*}*/
 
-.multiselect__placeholder {
-    display: inline-block !important;
-    margin-bottom: 0px !important;
-    padding-top: 0px !important;
-}
+/*.multiselect__placeholder {*/
+/*    display: inline-block !important;*/
+/*    margin-bottom: 0px !important;*/
+/*    padding-top: 0px !important;*/
+/*}*/
 .background-banner{
     width: auto;
     height: 200px;
     background-color: #4d62f6;
     z-index: 21;
 }
+
 .backdrop-banner{
     width: auto;
     height: 35%;
@@ -79,7 +80,7 @@
     background-color: transparent;
     font-size: 14px;
 }
-.datepicker_001 i svg {
+.datepicker_003 i svg {
     display: none;
 }
 

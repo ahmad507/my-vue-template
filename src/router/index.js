@@ -101,6 +101,7 @@ const ForumHome = () => import('@/views/Forum/ForumHome.vue')
 // Reservation
 const BookingBus = () => import('@/views/Reservations/Bus/BookingBus.vue')
 const BookingAirlines = () => import('@/views/Reservations/Flight/BookingAirlines.vue')
+const BookingAirlinesV1 = () => import('@/views/Reservations/Flight/BookingAirlinesV1.vue')
 const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/BookingInternationalAirlines.vue')
 const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue')
 const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue')
@@ -139,7 +140,7 @@ export default new VueRouter({
                 },
                 {
                     path:'/bookingairlines',
-                    component: BookingAirlines
+                    component: BookingAirlinesV1
                 },
                 {
                     path: '/bookinginternationalairlines',
