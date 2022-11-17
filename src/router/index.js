@@ -5,118 +5,120 @@ import Layout from '@/components/Layout/Layout'
 import LayoutHorizontal from '@/components/Layout/LayoutHorizontal'
 import LayoutPage from '@/components/Layout/LayoutPage'
 // Dashboard
-const DashboardV1 = () => import('@/views/Dashboard/DashboardV1.vue')
-const DashboardV2 = () => import('@/views/Dashboard/DashboardV2.vue')
-const DashboardV3 = () => import('@/views/Dashboard/DashboardV3.vue')
-const DashboardH = () => import('@/views/Dashboard/DashboardH.vue')
-const MainLayout = () => import('@/views/Dashboard/MainLayout.vue')
-const TestLayout = () => import('@/views/Dashboard/TestLayout.vue')
+const DashboardV1 = () => import('@/views/Dashboard/DashboardV1.vue');
+const DashboardV2 = () => import('@/views/Dashboard/DashboardV2.vue');
+const DashboardV3 = () => import('@/views/Dashboard/DashboardV3.vue');
+const DashboardH = () => import('@/views/Dashboard/DashboardH.vue');
+const MainLayout = () => import('@/views/Dashboard/MainLayout.vue');
+const TestLayout = () => import('@/views/Dashboard/TestLayout.vue');
 // Widgets
-const Widgets = () => import('@/views/Widgets/Widgets.vue')
+const Widgets = () => import('@/views/Widgets/Widgets.vue');
 // Elements
-const Buttons = () => import('@/views/Elements/Buttons.vue')
-const Cards = () => import('@/views/Elements/Cards.vue')
-const Carousel = () => import('@/views/Elements/Carousel.vue')
-const Colors = () => import('@/views/Elements/Colors.vue')
-const DropdownAnimations = () => import('@/views/Elements/DropdownAnimations.vue')
-const Grid = () => import('@/views/Elements/Grid.vue')
-const GridMasonry = () => import('@/views/Elements/GridMasonry.vue')
-const IconsFont = () => import('@/views/Elements/IconsFont.vue')
-const IconsWeather = () => import('@/views/Elements/IconsWeather.vue')
-const Tree = () => import('@/views/Elements/Tree.vue')
-const Notifications = () => import('@/views/Elements/Notifications.vue')
-const Draggable = () => import('@/views/Elements/Draggable.vue')
-const Spinners = () => import('@/views/Elements/Spinners.vue')
-const Sweetalert = () => import('@/views/Elements/Sweetalert.vue')
-const Typography = () => import('@/views/Elements/Typo.vue')
+const Buttons = () => import('@/views/Elements/Buttons.vue');
+const Cards = () => import('@/views/Elements/Cards.vue');
+const Carousel = () => import('@/views/Elements/Carousel.vue');
+const Colors = () => import('@/views/Elements/Colors.vue');
+const DropdownAnimations = () => import('@/views/Elements/DropdownAnimations.vue');
+const Grid = () => import('@/views/Elements/Grid.vue');
+const GridMasonry = () => import('@/views/Elements/GridMasonry.vue');
+const IconsFont = () => import('@/views/Elements/IconsFont.vue');
+const IconsWeather = () => import('@/views/Elements/IconsWeather.vue');
+const Tree = () => import('@/views/Elements/Tree.vue');
+const Notifications = () => import('@/views/Elements/Notifications.vue');
+const Draggable = () => import('@/views/Elements/Draggable.vue');
+const Spinners = () => import('@/views/Elements/Spinners.vue');
+const Sweetalert = () => import('@/views/Elements/Sweetalert.vue');
+const Typography = () => import('@/views/Elements/Typo.vue');
 // Forms
-const FormExtended = () => import('@/views/Forms/FormExtended.vue')
-const FormImagecrop = () => import('@/views/Forms/FormImagecrop.vue')
-const FormStandard = () => import('@/views/Forms/FormStandard.vue')
-const FormUpload = () => import('@/views/Forms/FormUpload.vue')
-const FormValidation = () => import('@/views/Forms/FormValidation.vue')
-const FormWizard = () => import('@/views/Forms/FormWizard.vue')
+const FormExtended = () => import('@/views/Forms/FormExtended.vue');
+const FormImagecrop = () => import('@/views/Forms/FormImagecrop.vue');
+const FormStandard = () => import('@/views/Forms/FormStandard.vue');
+const FormUpload = () => import('@/views/Forms/FormUpload.vue');
+const FormValidation = () => import('@/views/Forms/FormValidation.vue');
+const FormWizard = () => import('@/views/Forms/FormWizard.vue');
 // Charts
-const ChartEcharts = () => import('@/views/Charts/ChartEcharts.vue')
-const ChartFlot = () => import('@/views/Charts/ChartFlot.vue')
-const ChartJs = () => import('@/views/Charts/ChartJs.vue')
-const ChartMorris = () => import('@/views/Charts/ChartMorris.vue')
-const ChartRadial = () => import('@/views/Charts/ChartRadial.vue')
-const ChartRickshaw = () => import('@/views/Charts/ChartRickshaw.vue')
+const ChartEcharts = () => import('@/views/Charts/ChartEcharts.vue');
+const ChartFlot = () => import('@/views/Charts/ChartFlot.vue');
+const ChartJs = () => import('@/views/Charts/ChartJs.vue');
+const ChartMorris = () => import('@/views/Charts/ChartMorris.vue');
+const ChartRadial = () => import('@/views/Charts/ChartRadial.vue');
+const ChartRickshaw = () => import('@/views/Charts/ChartRickshaw.vue');
 // Tables
-const TableVueTables = () => import('@/views/Tables/TableVueTables.vue')
-const TableDatatable = () => import('@/views/Tables/TableDatatable.vue')
-const TableExtended = () => import('@/views/Tables/TableExtended.vue')
-const TableStandard = () => import('@/views/Tables/TableStandard.vue')
+const TableVueTables = () => import('@/views/Tables/TableVueTables.vue');
+const TableDatatable = () => import('@/views/Tables/TableDatatable.vue');
+const TableExtended = () => import('@/views/Tables/TableExtended.vue');
+const TableStandard = () => import('@/views/Tables/TableStandard.vue');
 // Maps
-const MapsGoogle = () => import('@/views/Maps/MapsGoogle.vue')
-const MapsVector = () => import('@/views/Maps/MapsVector.vue')
+const MapsGoogle = () => import('@/views/Maps/MapsGoogle.vue');
+const MapsVector = () => import('@/views/Maps/MapsVector.vue');
 // Pages
-const Error404 = () => import('@/views/Pages/404.vue')
-const Error500 = () => import('@/views/Pages/500.vue')
-const Lock = () => import('@/views/Pages/Lock.vue')
-const Login = () => import('@/views/Pages/Login.vue')
-const Maintenance = () => import('@/views/Pages/Maintenance.vue')
-const Recover = () => import('@/views/Pages/Recover.vue')
-const Register = () => import('@/views/Pages/Register.vue')
-const Template = () => import('@/views/Pages/Template.vue')
+const Error404 = () => import('@/views/Pages/404.vue');
+const Error500 = () => import('@/views/Pages/500.vue');
+const Lock = () => import('@/views/Pages/Lock.vue');
+const Login = () => import('@/views/Pages/Login.vue');
+const Maintenance = () => import('@/views/Pages/Maintenance.vue');
+const Recover = () => import('@/views/Pages/Recover.vue');
+const Register = () => import('@/views/Pages/Register.vue');
+const Template = () => import('@/views/Pages/Template.vue');
 // Extras
-const BugTracker = () => import('@/views/Extras/BugTracker.vue')
-const Calendar = () => import('@/views/Extras/Calendar.vue')
-const ContactDetails = () => import('@/views/Extras/ContactDetails.vue')
-const Contacts = () => import('@/views/Extras/Contacts.vue')
-const Faq = () => import('@/views/Extras/Faq.vue')
-const FileManager = () => import('@/views/Extras/FileManager.vue')
-const Followers = () => import('@/views/Extras/Followers.vue')
-const HelpCenter = () => import('@/views/Extras/HelpCenter.vue')
-const Invoice = () => import('@/views/Extras/Invoice.vue')
-const Mailbox = () => import('@/views/Extras/Mailbox.vue')
-const Plans = () => import('@/views/Extras/Plans.vue')
-const Profile = () => import('@/views/Extras/Profile.vue')
-const ProjectDetails = () => import('@/views/Extras/ProjectDetails.vue')
-const Projects = () => import('@/views/Extras/Projects.vue')
-const Search = () => import('@/views/Extras/Search.vue')
-const Settings = () => import('@/views/Extras/Settings.vue')
-const SocialBoard = () => import('@/views/Extras/SocialBoard.vue')
-const TeamViewer = () => import('@/views/Extras/TeamViewer.vue')
-const Timeline = () => import('@/views/Extras/Timeline.vue')
-const Todo = () => import('@/views/Extras/Todo.vue')
-const VoteLinks = () => import('@/views/Extras/VoteLinks.vue')
+const BugTracker = () => import('@/views/Extras/BugTracker.vue');
+const Calendar = () => import('@/views/Extras/Calendar.vue');
+const ContactDetails = () => import('@/views/Extras/ContactDetails.vue');
+const Contacts = () => import('@/views/Extras/Contacts.vue');
+const Faq = () => import('@/views/Extras/Faq.vue');
+const FileManager = () => import('@/views/Extras/FileManager.vue');
+const Followers = () => import('@/views/Extras/Followers.vue');
+const HelpCenter = () => import('@/views/Extras/HelpCenter.vue');
+const Invoice = () => import('@/views/Extras/Invoice.vue');
+const Mailbox = () => import('@/views/Extras/Mailbox.vue');
+const Plans = () => import('@/views/Extras/Plans.vue');
+const Profile = () => import('@/views/Extras/Profile.vue');
+const ProjectDetails = () => import('@/views/Extras/ProjectDetails.vue');
+const Projects = () => import('@/views/Extras/Projects.vue');
+const Search = () => import('@/views/Extras/Search.vue');
+const Settings = () => import('@/views/Extras/Settings.vue');
+const SocialBoard = () => import('@/views/Extras/SocialBoard.vue');
+const TeamViewer = () => import('@/views/Extras/TeamViewer.vue');
+const Timeline = () => import('@/views/Extras/Timeline.vue');
+const Todo = () => import('@/views/Extras/Todo.vue');
+const VoteLinks = () => import('@/views/Extras/VoteLinks.vue');
 // Blog
-const Blog = () => import('@/views/Blog/Blog.vue')
-const BlogArticles = () => import('@/views/Blog/BlogArticles.vue')
-const BlogArticleView = () => import('@/views/Blog/BlogArticleView.vue')
-const BlogPost = () => import('@/views/Blog/BlogPost.vue')
+const Blog = () => import('@/views/Blog/Blog.vue');
+const BlogArticles = () => import('@/views/Blog/BlogArticles.vue');
+const BlogArticleView = () => import('@/views/Blog/BlogArticleView.vue');
+const BlogPost = () => import('@/views/Blog/BlogPost.vue');
 // Ecommerce
-const EcommerceCheckout = () => import('@/views/Ecommerce/EcommerceCheckout.vue')
-const EcommerceOrders = () => import('@/views/Ecommerce/EcommerceOrders.vue')
-const EcommerceOrderView = () => import('@/views/Ecommerce/EcommerceOrderView.vue')
-const EcommerceProducts = () => import('@/views/Ecommerce/EcommerceProducts.vue')
-const EcommerceProductView = () => import('@/views/Ecommerce/EcommerceProductView.vue')
+const EcommerceCheckout = () => import('@/views/Ecommerce/EcommerceCheckout.vue');
+const EcommerceOrders = () => import('@/views/Ecommerce/EcommerceOrders.vue');
+const EcommerceOrderView = () => import('@/views/Ecommerce/EcommerceOrderView.vue');
+const EcommerceProducts = () => import('@/views/Ecommerce/EcommerceProducts.vue');
+const EcommerceProductView = () => import('@/views/Ecommerce/EcommerceProductView.vue');
 // Forum
-const ForumCategories = () => import('@/views/Forum/ForumCategories.vue')
-const ForumDiscussion = () => import('@/views/Forum/ForumDiscussion.vue')
-const ForumTopics = () => import('@/views/Forum/ForumTopics.vue')
-const ForumHome = () => import('@/views/Forum/ForumHome.vue')
+const ForumCategories = () => import('@/views/Forum/ForumCategories.vue');
+const ForumDiscussion = () => import('@/views/Forum/ForumDiscussion.vue');
+const ForumTopics = () => import('@/views/Forum/ForumTopics.vue');
+const ForumHome = () => import('@/views/Forum/ForumHome.vue');
 // Reservation
-const BookingBus = () => import('@/views/Reservations/Bus/BookingBus.vue')
-const BookingAirlines = () => import('@/views/Reservations/Flight/BookingAirlines.vue')
-const BookingAirlinesV1 = () => import('@/views/Reservations/Flight/BookingAirlinesV1.vue')
-const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/BookingInternationalAirlines.vue')
-const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue')
-const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue')
-const BookingKai = () => import('@/views/Reservations/Train/BookingKAI.vue')
+const BookingBus = () => import('@/views/Reservations/Bus/BookingBus.vue');
+const BookingAirlines = () => import('@/views/Reservations/Flight/BookingAirlines.vue');
+const BookingAirlinesV1 = () => import('@/views/Reservations/Flight/BookingAirlinesV1.vue');
+const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/BookingInternationalAirlines.vue');
+const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue');
+const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue');
+const BookingKai = () => import('@/views/Reservations/Train/BookingKAI.vue');
 // Payment
-const MultiFinance = () => import('@/views/Payments/Multifinance/MultiFinance.vue')
-const MultiPayment = () => import('@/views/Payments/PPOB/MultiPayment.vue')
+const MultiFinance = () => import('@/views/Payments/Multifinance/MultiFinance.vue');
+const MultiPayment = () => import('@/views/Payments/PPOB/MultiPayment.vue');
 // Product Payment
-const PaymentPDAM = () => import('@/views/Payments/Products/PDAM.vue')
-const PaymentPGN = () => import('@/views/Payments/Products/PGN.vue')
-const PaymentPLN = () => import('@/views/Payments/Products/PLN.vue')
-const PaymentTelkom = () => import('@/views/Payments/Products/Telkom.vue')
-const PaymentPascabayar = () => import('@/views/Payments/Products/PascaBayar.vue')
+const PaymentPDAM = () => import('@/views/Payments/Products/PDAM.vue');
+const PaymentPGN = () => import('@/views/Payments/Products/PGN.vue');
+const PaymentPLN = () => import('@/views/Payments/Products/PLN.vue');
+const PaymentTelkom = () => import('@/views/Payments/Products/Telkom.vue');
+const PaymentPascabayar = () => import('@/views/Payments/Products/PascaBayar.vue');
+// Flight Matrix
+const FlightMatrix = () => import('@/components/Common/Travel/Flights/FlightMatrix.vue');
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
     mode: 'history',
@@ -177,6 +179,12 @@ export default new VueRouter({
                 {
                     path: '/orderpln',
                     component: PaymentPLN
+                },
+                {
+                    path: '/flightmatrix',
+                    name : 'flightmatrix',
+                    component: FlightMatrix,
+                    props: true
                 },
             ]
         },

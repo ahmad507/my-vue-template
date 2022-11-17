@@ -88,16 +88,16 @@
     background-color: #4d62f6;
 }
 .red_border {
-    border: 1px solid red;
+    border: 1px solid transparent;
 }
 .green_border {
-    border: 1px solid green;
+    border: 1px solid transparent;
 }
 .blue_border {
-    border: 1px solid blue;
+    border: 1px solid transparent;
 }
 .cyan_border {
-    border: 1px solid cyan;
+    border: 1px solid transparent;
 }
 @media only screen and (max-width: 320px) {
     .xs_screen {
@@ -172,4 +172,7 @@
 }
 .box-info-regulation {
     background-color: rgb(167, 248, 255);
+}
+.box-info-schedule {
+    background-color: rgba(53, 230, 255, 0.43);
 }

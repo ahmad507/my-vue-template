@@ -166,7 +166,7 @@
     import Datepicker from 'vue2-datepicker';
     import moment from 'moment';
     import 'vue2-datepicker/index.css';
-    import FlightMatrixRow from '../../../services/FlightMatrixRows.json'
+    // import FlightMatrixRow from '../../../services/FlightMatrixRows.json'
     import Buttons from "../../Elements/Buttons";
 
     export default {
@@ -187,7 +187,7 @@
                 searchPayload : {},
                 fare_matrix : {},
                 schedule_matrix : {},
-                flight_matrix : FlightMatrixRow
+                // flight_matrix : FlightMatrixRow
             }
         },
         name: "BookingAirlines",
