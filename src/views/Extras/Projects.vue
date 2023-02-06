@@ -74,7 +74,7 @@
                                     :options="{
                                         type:'pie',
                                         height:'24',
-                                        sliceColors:['#edf1f2', '#23b7e5']
+                                        sliceColors:['#edf1f2', '#797EF6']
                                     }"
                                     class="sparkline inline mr-2"/>
                                  <Sparkline :values="[60,40]"
@@ -168,7 +168,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -262,7 +262,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -356,7 +356,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -443,7 +443,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -537,7 +537,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -631,7 +631,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -725,7 +725,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"
@@ -819,7 +819,7 @@
                                         :options="{
                                             type:'pie',
                                             height:'24',
-                                            sliceColors:['#edf1f2', '#23b7e5']
+                                            sliceColors:['#edf1f2', '#797EF6']
                                         }"
                                         class="sparkline inline mr-2"/>
                                      <Sparkline :values="[60,40]"

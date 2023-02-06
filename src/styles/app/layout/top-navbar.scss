@@ -32,7 +32,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     z-index: 1050;
     border: 0;
     padding: 0;
-    min-height: $navbar-height;
+    max-height: $navbar-height;
     background-color: $nav-top-bg;
     @include gradient-x($nav-top-bg-start, $nav-top-bg-end); // // dont' allow stacked icons
 

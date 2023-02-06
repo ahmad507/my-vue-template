@@ -8,7 +8,8 @@ const Menu = [
         icon: 'icon-speedometer',
         translate: 'sidebar.nav.DASHBOARD',
         label: { value: 3, color: 'success' },
-        submenu: [{
+        submenu: [
+            {
                 name: 'Dashboard v1',
                 path: '/dashboardv1'
             },
@@ -19,6 +20,18 @@ const Menu = [
             {
                 name: 'Dashboard v3',
                 path: '/dashboardv3'
+            },
+            {
+                name: 'Transaction',
+                path: '/mainlayout'
+            },
+            {
+                name: 'TestLayout',
+                path: '/testlayout'
+            },
+            {
+                name: 'Umroh',
+                path: '/testUmroh'
             }
         ]
     },

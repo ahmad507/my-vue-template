@@ -27,14 +27,14 @@
                             type:'line',
                             width:'100%',
                             height:'75px',
-                            lineColor:'#23b7e5',
+                            lineColor:'#797EF6',
                             chartRangeMin:'0',
-                            fillColor:'#23b7e5',
-                            spotColor:'#23b7e5',
-                            minSpotColor:'#23b7e5',
-                            maxSpotColor:'#23b7e5',
-                            highlightSpotColor:'#23b7e5',
-                            highlightLineColor:'#23b7e5',
+                            fillColor:'#797EF6',
+                            spotColor:'#797EF6',
+                            minSpotColor:'#797EF6',
+                            maxSpotColor:'#797EF6',
+                            highlightSpotColor:'#797EF6',
+                            highlightLineColor:'#797EF6',
                             resize:true
                         }"
                         :values="[2,5,3,7,4,5]"
@@ -83,14 +83,14 @@
                             type:'line',
                             width:'100%',
                             height:'75px',
-                            lineColor:'#23b7e5',
+                            lineColor:'#797EF6',
                             chartRangeMin:'0',
-                            fillColor:'#23b7e5',
-                            spotColor:'#23b7e5',
-                            minSpotColor:'#23b7e5',
-                            maxSpotColor:'#23b7e5',
-                            highlightSpotColor:'#23b7e5',
-                            highlightLineColor:'#23b7e5',
+                            fillColor:'#797EF6',
+                            spotColor:'#797EF6',
+                            minSpotColor:'#797EF6',
+                            maxSpotColor:'#797EF6',
+                            highlightSpotColor:'#797EF6',
+                            highlightLineColor:'#797EF6',
                             resize:true
                         }"
                         :values="[4,5,3,10,7,15]"
@@ -288,7 +288,7 @@
                             </div>
                         </div>
                         <Sparkline :options="{
-                                barColor:'#23b7e5',
+                                barColor:'#797EF6',
                                 height:30,
                                 barWidth:5,
                                 barSpacing:2
@@ -557,7 +557,7 @@
     import VectorMap from '@/components/Maps/VectorMap';
 
     const defaultColors = {
-        markerColor:  '#23b7e5',      // the marker points
+        markerColor:  '#797EF6',      // the marker points
         bgColor:      'transparent',  // the background
         scaleColors:  ['#878c9a'],    // the color of the region in the serie
         regionFill:   '#bbbec6'       // the base region color
@@ -744,7 +744,7 @@
             // EasyPieChar
             let pieOptions1 = {
                  animate: {duration: 800, enabled: true},
-                 barColor:"#23b7e5",
+                 barColor:"#797EF6",
                  trackColor:"rgba(200,200,200,0.4)",
                  scaleColor:false,
                  lineWidth:10,

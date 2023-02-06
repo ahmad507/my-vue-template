@@ -64,11 +64,11 @@
                                     height:'100',
                                     width:'100%',
                                     lineWidth:'3',
-                                    lineColor:'#23b7e5',
+                                    lineColor:'#797EF6',
                                     chartRangeMin:'0',
                                     spotColor:'#888',
-                                    minSpotColor:'#23b7e5',
-                                    maxSpotColor:'#23b7e5',
+                                    minSpotColor:'#797EF6',
+                                    maxSpotColor:'#797EF6',
                                     fillColor:'#e5f2fa',
                                     highlightLineColor:'#fff',
                                     spotRadius:'5',
@@ -85,7 +85,7 @@
                                 <Sparkline :options="{
                                         type:'pie',
                                         height:'60',
-                                        sliceColors:['#edf1f2', '#23b7e5']
+                                        sliceColors:['#edf1f2', '#797EF6']
                                     }"
                                     :values="[20,80]"
                                     class="sparkline"/>

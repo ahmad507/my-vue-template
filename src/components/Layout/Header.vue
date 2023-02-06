@@ -1,7 +1,7 @@
 <template>
     <header class="topnavbar-wrapper">
         <!-- START Top Navbar-->
-        <nav class="navbar topnavbar">
+        <nav class="navbar topnavbar navbar-height">
             <!-- START navbar header-->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/">
@@ -18,13 +18,13 @@
             <ul class="navbar-nav mr-auto flex-row">
                 <li class="nav-item">
                     <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
-                     <a href="" class="nav-link d-none d-md-block d-lg-block d-xl-block" @click.prevent="toggleAsideCollapsed">
-                        <em class="fas fa-bars"></em>
-                    </a>
+                    <router-link class="nav-link d-none d-md-block d-lg-block d-xl-block" to="/mainlayout" title="Lock screen">
+                        <em class="fas fa-home"></em>
+                    </router-link>
                     <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
-                    <a href="" class="nav-link sidebar-toggle d-md-none" @click.prevent="toggleOffcanvas">
-                        <em class="fas fa-bars"></em>
-                    </a>
+                    <router-link class="nav-link sidebar-toggle d-md-none" to="/mainlayout" title="Lock screen">
+                        <em class="fas fa-home"></em>
+                    </router-link>
                 </li>
                 <!-- START User avatar toggle-->
                 <li class="nav-item d-none d-md-block">
@@ -115,6 +115,7 @@
                 <!-- START Offsidebar button-->
                 <li class="nav-item">
                     <a href="" class="nav-link" @click.prevent.prevent="toggleOffsidebar">
+<!--                    <a href="" class="nav-link">-->
                         <em class="icon-notebook"></em>
                     </a>
                 </li>

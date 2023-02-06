@@ -1,9 +1,9 @@
 // GLOBAL CONSTANTS
 // -----------------------------------
 export const APP_COLORS = {
-    'primary':                '#5d9cec',
+    'primary':                '#797EF6',
     'success':                '#27c24c',
-    'info':                   '#23b7e5',
+    'info':                   '#797EF6',
     'warning':                '#ff902b',
     'danger':                 '#f05050',
     'inverse':                '#131e26',
