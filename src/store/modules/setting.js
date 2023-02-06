@@ -6,7 +6,7 @@ const SettingModule = {
         /* Layout fixed. Scroll content only */
         isFixed: true,
         /* Sidebar collapsed */
-        isCollapsed: false,
+        isCollapsed: true,
         /* Boxed layout */
         isBoxed: false,
         /* Floating sidebar */
@@ -20,7 +20,7 @@ const SettingModule = {
         /* Toggle for the offsidebar */
         offsidebarOpen: false,
         /* Toggle for the sidebar offcanvas (mobile) */
-        asideToggled: false,
+        asideToggled: true,
         /* Toggle for the sidebar user block */
         showUserBlock: false,
         /* Enables layout horizontal */

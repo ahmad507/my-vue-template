@@ -9,18 +9,18 @@ const Menu = [
         translate: 'sidebar.nav.DASHBOARD',
         label: { value: 3, color: 'success' },
         submenu: [
-            // {
-            //     name: 'Dashboard v1',
-            //     path: '/dashboardv1'
-            // },
-            // {
-            //     name: 'Dashboard v2',
-            //     path: '/dashboardv2'
-            // },
-            // {
-            //     name: 'Dashboard v3',
-            //     path: '/dashboardv3'
-            // },
+            {
+                name: 'Dashboard v1',
+                path: '/dashboardv1'
+            },
+            {
+                name: 'Dashboard v2',
+                path: '/dashboardv2'
+            },
+            {
+                name: 'Dashboard v3',
+                path: '/dashboardv3'
+            },
             {
                 name: 'Transaction',
                 path: '/mainlayout'
@@ -28,6 +28,10 @@ const Menu = [
             {
                 name: 'TestLayout',
                 path: '/testlayout'
+            },
+            {
+                name: 'Umroh',
+                path: '/testUmroh'
             }
         ]
     },

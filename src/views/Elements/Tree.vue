@@ -15,7 +15,9 @@
                     :data="data"
                     show-checkbox
                     multiple
+                    size="large"
                     allow-batch
+                    no-dots
                     whole-row
                     draggable
                     @item-click="itemClick"
@@ -166,3 +168,4 @@
         }
     }
 </script>
+

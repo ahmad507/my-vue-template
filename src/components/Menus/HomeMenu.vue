@@ -1,11 +1,8 @@
 <template>
-    <ContentWrapper class="p-0 mt-n4">
-        <card-deposit
-                v-model="user_details"
-                :user_name="user_details.user_name"
-                :user_deposit="user_details.user_deposit"
-                :user_transaction="user_details.user_transaction" />
-        <div class="row p-4 mt-n5">
+    <ContentWrapper>
+        <div class="card">Banner 1</div>
+        <div class="card">Menu Favorit</div>
+        <div class="row my-2">
             <div class="container bg-white rounded-top">
                 <menu-reservation title="Reservasi Tiket"/>
             </div>
@@ -16,6 +13,8 @@
                 <menu-topup title="Topup"/>
             </div>
         </div>
+        <div class="card">Banner 1</div>
+        <div class="card">Menu Favorit</div>
     </ContentWrapper>
 </template>
 

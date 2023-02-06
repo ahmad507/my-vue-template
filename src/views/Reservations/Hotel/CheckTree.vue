@@ -1,45 +1,43 @@
 <template>
     <ContentWrapper>
-<!--        <div class="card my-2 p-2">Rol & Prmission Yang Dikirim : {{dataRole}}</div>-->
-        <check-tree/>
-<!--        <div class="col-md-4">-->
-<!--            <ul class="list-group">-->
-<!--                <li class="list-group-item">-->
-<!--                    <div class="mx-4 my-1" v-for="role in dataDemo" :key="role.id">-->
-<!--                        <div class="row">-->
-<!--                            <label class="c-checkbox">-->
-<!--                                <input :id="role.id" type="checkbox" :value="role.name" v-model="role[role.name]" @change="handle_check"/>-->
-<!--                                <span class="fa fa-check"></span>-->
-<!--                            </label>-->
-<!--                            <div @click="open_close($event)" v-model="role[role.name]" v-b-toggle="role.name + '1' "><em :class="classIcon" v-b-toggle="role.name + '1' "></em>ROLE {{role.name}}</div>-->
-<!--                        </div>-->
-<!--                        <b-collapse :id="role.name + '1' " class="mt-2">-->
-<!--                            <div class="form-group">-->
-<!--                                <div class="col-md-12" v-for="permission in role.permission" :key="permission.id">-->
-<!--                                    <label class="c-checkbox">-->
-<!--                                        <input :id="permission.name" type="checkbox" :value="permission.name" :checked="checked" @change="handle_check_permission($event, permission.name)"/>-->
-<!--                                        <span class="fa fa-check"></span>-->
-<!--                                        {{permission.id}} . {{permission.name.toUpperCase()}}-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-12">-->
-<!--                                <div class="btn btn-primary my-2 float-right" @click="setRole">Set Role</div>-->
-<!--                            </div>-->
-<!--                        </b-collapse>-->
-<!--                    </div>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
+        <div class="card my-2 p-2">Rol & Prmission Yang Dikirim : {{dataRole}}</div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="mx-4 my-1" v-for="role in dataDemo" :key="role.id">
+                        <div class="row">
+                            <label class="c-checkbox">
+                                <input :id="role.id" type="checkbox" :value="role.name" v-model="role[role.name]" @change="handle_check"/>
+                                <span class="fa fa-check"></span>
+                            </label>
+                            <div @click="open_close($event)" v-model="role[role.name]" v-b-toggle="role.name + '1' "><em :class="classIcon" v-b-toggle="role.name + '1' "></em>ROLE {{role.name}}</div>
+                        </div>
+                        <b-collapse :id="role.name + '1' " class="mt-2">
+                            <div class="form-group">
+                                <div class="col-md-12" v-for="permission in role.permission" :key="permission.id">
+                                    <label class="c-checkbox">
+                                        <input :id="permission.name" type="checkbox" :value="permission.name" :checked="checked" @change="handle_check_permission($event, permission.name)"/>
+                                        <span class="fa fa-check"></span>
+                                        {{permission.id}} . {{permission.name.toUpperCase()}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="btn btn-primary my-2 float-right" @click="setRole">Set Role</div>
+                            </div>
+                        </b-collapse>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </ContentWrapper>
 </template>
 <script>
     import axios from 'axios';
-    import CheckTree from "./CheckTree";
     export default {
-        name: "BookingHotel",
+        name: "CheckTree",
 
-        components :{CheckTree},
+        components :{},
 
         data(){
             return {

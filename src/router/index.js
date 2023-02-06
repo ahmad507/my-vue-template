@@ -101,7 +101,6 @@ const ForumHome = () => import('@/views/Forum/ForumHome.vue');
 // Reservation
 const BookingBus = () => import('@/views/Reservations/Bus/BookingBus.vue');
 const BookingAirlines = () => import('@/views/Reservations/Flight/BookingAirlines.vue');
-const BookingAirlinesV1 = () => import('@/views/Reservations/Flight/BookingAirlinesV1.vue');
 const BookingInternationalAirlines = () => import('@/views/Reservations/Flight/BookingInternationalAirlines.vue');
 const BookingHotel = () => import('@/views/Reservations/Hotel/BookingHotel.vue');
 const BookingPelni = () => import('@/views/Reservations/Ship/BookingPelni.vue');
@@ -118,11 +117,15 @@ const PaymentPascabayar = () => import('@/views/Payments/Products/PascaBayar.vue
 // Flight Matrix
 const FlightMatrix = () => import('@/components/Common/Travel/Flights/FlightMatrix.vue');
 
+// Umroh
+ const PaketUmroh = () => import('@/views/Reservations/Umroh/BookingUmroh.vue')
+
 Vue.use(VueRouter);
 
 export default new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
+    meta:{sidebar:false},
     routes: [
         {
             path: '/',
@@ -142,7 +145,7 @@ export default new VueRouter({
                 },
                 {
                     path:'/bookingairlines',
-                    component: BookingAirlinesV1
+                    component: BookingAirlines
                 },
                 {
                     path: '/bookinginternationalairlines',
@@ -205,7 +208,10 @@ export default new VueRouter({
                     path: '/dashboardv3',
                     component: DashboardV3
                 },
-
+                {
+                    path: '/testUmroh',
+                    component: PaketUmroh,
+                },
                 // Widgets
                 {
                     path: '/widgets',
