@@ -1,8 +1,8 @@
 <template>
     <ContentWrapper>
-        <div class="card">Banner 1</div>
-        <div class="card">Menu Favorit</div>
-        <div class="row my-2">
+        <div class="container card">Banner 1</div>
+        <div class="container card">Menu Favorit</div>
+        <div class="row mb-4 mt-2">
             <div class="container bg-white rounded-top">
                 <menu-reservation title="Reservasi Tiket"/>
             </div>
@@ -13,8 +13,8 @@
                 <menu-topup title="Topup"/>
             </div>
         </div>
-        <div class="card">Banner 1</div>
-        <div class="card">Menu Favorit</div>
+        <div class="container card">Banner 1</div>
+        <div class="container card">Menu Favorit</div>
     </ContentWrapper>
 </template>
 
