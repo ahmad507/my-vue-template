@@ -6,13 +6,13 @@
         </div>
         <div class="menu-icon mt-1">
             <div v-for="dataMenu in dataMenus" :key="dataMenu.text">
-                    <router-link :to="dataMenu.link" style="text-decoration: none">
-                        <img :src="dataMenu.icon" alt="menu-icon.png" />
-                        <br>
-                        <small class="text-dark">{{dataMenu.text}}</small>
-                    </router-link>
-                </div>
+                <router-link :to="dataMenu.link" style="text-decoration: none">
+                    <img :src="dataMenu.icon" alt="menu-icon.png" />
+                    <br>
+                    <small class="text-dark">{{dataMenu.text}}</small>
+                </router-link>
             </div>
+        </div>
     </ContentWrapper>
 </template>
 <script>
